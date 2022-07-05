@@ -69,14 +69,13 @@ function myElement() {
 }
 
 
-
 //Delete all listed items and reload the page
 function clearAll(x) {
   switch (x) {
     case 'removeList':
       document.getElementById('myUL').style.display='none';
       location.reload();
-      break;
+      break; 
     default :
     console.log ('Cant clear list'); 
       
