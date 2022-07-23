@@ -3,11 +3,9 @@
  //////////////////////////////// To Do App JS ///////////////////////////////////////
 
 
-// Orignally created this in Brackets code editior at work before moving over to VS Code . 
+ 
 
-// Still have a few more things to do like create an edit option but i will research that later once i learn that .The strike through was working but now its not so i need to sort that out as well . 
+// Edit Tasks needs to be done
+// Web storange needs to be down on browser refreshing
+// RWD is still in progress ... 
 
-// RWD is still in progress as ive managed to get working for a mobile device but not 
-tablets. 
-
-// 

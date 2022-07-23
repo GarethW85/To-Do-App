@@ -1,6 +1,9 @@
 
 // JAVASCRIPT IS MY NEW FAVOURITE LANGUAGE
 
+
+
+
 // Create a "close" button and append it to each list item
 var mylist = document.getElementsByTagName("LI");
 var i;
@@ -15,6 +18,7 @@ for (i = 0; i < mylist.length; i++) {
 
 
 // Click on a close button to hide the current list item
+
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -25,7 +29,9 @@ for (i = 0; i < close.length; i++) {
 }
 
 
+
 // Add a "checked" symbol when clicking on a list item
+
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
@@ -54,7 +60,6 @@ function myElement() {
   document.getElementById("myInput").value = "";
 
   var span = document.createElement("SPAN");
-  // var txt = document.createTextNode("\u00D7");
   var txt = document.createTextNode("\u2717");
   span.className = "close";
   span.appendChild(txt);
@@ -70,6 +75,7 @@ function myElement() {
 
 
 //Delete all listed items and reload the page
+
 function clearAll(x) {
   switch (x) {
     case 'removeList':
@@ -81,5 +87,27 @@ function clearAll(x) {
       
   }
 
+}
 
+//Sort by alphabetical order on click
+
+function sortList() {
+  var list, i , switching, listitems, shouldSwitch;
+    list = document.getElementById('myUL');
+    switching = true;
+ 
+    while (switching) {
+       switching = false;
+       listitems = list.getElementsByTagName("li");
+ 
+       for (i = 0 ; i < (listitems.length-1); i++ ){
+       shouldSwitch = false;
+       if(listitems[i].innerHTML.toLowerCase() > listitems[i+1].innerHTML.toLowerCase()){
+          shouldSwitch = true;
+          break;
+          }
+       }
+       listitems[i].parentNode.insertBefore(listitems[i+1],listitems[i]);
+       switching = true;
+    }
 }

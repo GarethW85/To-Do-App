@@ -24,16 +24,22 @@
 <body id="background" >
     
         <div id="myDIV" class="header" >
-            <h1>To Do List</h1>
+            <h1>To Do List</h1> 
             <input type="text" id="myInput" placeholder="Create your list ... ">
-            <!-- <span onclick="myElement()" class="Btn">+</span> -->
+            
             <button onclick="myElement()" class="Btn"><i class="fa-solid fa-plus"></i></button>
+            <!-- Remove all items from the list -->
             <button onclick="clearAll('removeList')" class="BtnDelete" id="removeList"><i class="fa-regular fa-trash-can"></i></i></button>
+            <!-- sort list in alhpabetical order -->
+            <button onclick="sortList()" class="sortLst" id="sortList">Sort</button>
+            
+            
 
             <br><br>
             <!-- Added a hidden message to display if no input added -->
             <h5 class="animate__animated animate__shakeX" style="color: black;" id="errorMsg" hidden >Your list can't be blank!</h5>
-            <h5 class="animate__animated animate__shakeX" style="color: black;" id="errorMsg2" hidden >Nothing to delete!</h5>
+            <!-- <h5 class="animate__animated animate__shakeX" style="color: black;" id="errorMsg2" hidden >Nothing to delete!</h5> -->
+            
         </div>
 
       <ul id="myUL"></ul>
