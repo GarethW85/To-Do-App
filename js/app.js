@@ -1,24 +1,23 @@
+//////////////////////////////////////////////////////////
+////// JAVASCRIPT IS MY NEW FAVOURITE LANGUAGE ///////////
+//////////////////////////////////////////////////////////
 
-// JAVASCRIPT IS MY NEW FAVOURITE LANGUAGE
 
 
-
-
-// Create a "close" button and append it to each list item
-var mylist = document.getElementsByTagName("LI");
+// Create a "close" button X
+//////////////////////////////////////////////////////////
+var mylist = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < mylist.length; i++) {
   var span = document.createElement("SPAN");
-  // var txt = document.createTextNode("\u00D7");
   var txt = document.createTextNode("\uD83D\uDDD1");
   span.className = "close";
   mylist[i].appendChild(span);
 }
 
 
-
 // Click on a close button to hide the current list item
-
+////////////////////////////////////////////////////////
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -29,19 +28,8 @@ for (i = 0; i < close.length; i++) {
 }
 
 
-
-// Add a "checked" symbol when clicking on a list item
-
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-
-
 // Create a new list item when clicking on the "Add" button
+///////////////////////////////////////////////////////////
 function myElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
@@ -74,8 +62,8 @@ function myElement() {
 }
 
 
-//Delete all listed items and reload the page
-
+// Delete all listed items and reload the page
+/////////////////////////////////////////////
 function clearAll(x) {
   switch (x) {
     case 'removeList':
@@ -83,14 +71,13 @@ function clearAll(x) {
       location.reload();
       break; 
     default :
-    console.log ('Cant clear list'); 
-      
+    console.log ('Cant clear list');   
   }
-
 }
 
-//Sort by alphabetical order on click
 
+// Sort by alphabetical order on click
+//////////////////////////////////////////////////////////
 function sortList() {
   var list, i , switching, listitems, shouldSwitch;
     list = document.getElementById('myUL');
