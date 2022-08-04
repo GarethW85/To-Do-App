@@ -14,8 +14,8 @@ Step 5 : You also have the option to mark the item as completed by clicking on t
          if this was a mistake you can undo it by double clicking on the name of the item to unmark it.
 Step 6 : Once you have created your list you can delete everything if you are just testing it by clicking 
          on the trash can icon next to the + button.
-
-Step 7 : Enjoy the app :)         
+Step 7 : You can sort the list in Alphabetical order by clicking "SORT".  
+Step 8 : ENJOY THE APP :)        
         
 
 <a href="https://raw.githack.com/GarethW85/To-Do-App/main/todo.html"><h2>DEMO LIVE</h2></a>
