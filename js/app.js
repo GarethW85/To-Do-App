@@ -47,6 +47,16 @@ function myElement() {
   }
   document.getElementById("myInput").value = "";
 
+  //Strikethrough on List items
+  /////////////////////////////////////////////////////////
+  li.addEventListener('click', function () {
+    li.style.textDecoration = "line-through"
+  })
+
+  li.addEventListener('dblclick', function () {
+    li.style.textDecoration = "none"
+  })
+
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u2717");
   span.className = "close";
@@ -97,4 +107,25 @@ function sortList() {
        listitems[i].parentNode.insertBefore(listitems[i+1],listitems[i]);
        switching = true;
     }
+}
+
+
+// Local Storage
+///////////////////////////////////////////////////////
+
+function save() {
+// get date from input field
+var new_data = document.getElementById('myInput').value;
+
+// it storage is empty then 
+if (localStorage.getItem('data') == null ) {
+  localStorage.setItem('data', '[]')
+}
+
+//get old data
+var old_data = JSON.parse(localStorage.getItem('data'));
+old_data.push(new_data);
+
+//save new data
+localStorage.setItem('data', JSON.stringify(old_data));
 }
