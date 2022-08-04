@@ -18,6 +18,6 @@ Step 6 : Once you have created your list you can delete everything if you are ju
 Step 7 : Enjoy the app :)         
         
 
-<a href="https://raw.githack.com/GarethW85/To-Do-App/main/todo.html"><h2>LIVE DEMO</h2></a>
+<a href="https://raw.githack.com/GarethW85/To-Do-App/main/todo.html"><h2>DEMO LIVE</h2></a>
 
 //////////////////////////////////////////////////////////////////////////////////////
