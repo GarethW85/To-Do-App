@@ -17,6 +17,7 @@ Step 6 : Once you have created your list you can delete everything if you are ju
 Step 7 : You can sort the list in Alphabetical order by clicking the down arrow button labled with AZ.  <br>
 Step 8 : ENJOY THE APP ... give it a go below :)  <br>
         
+** View saved data in local storage ** <br>
 
 <a href="https://raw.githack.com/GarethW85/To-Do-App/main/todo.html" ><h2>DEMO LIVE</h2></a>
 
