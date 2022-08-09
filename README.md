@@ -18,6 +18,6 @@ Step 7 : You can sort the list in Alphabetical order by clicking the down arrow 
 Step 8 : ENJOY THE APP ... give it a go below :)  <br>
         
 
-<a href="https://raw.githack.com/GarethW85/To-Do-App/main/todo.html"><h2>DEMO LIVE</h2></a>
+<a href="https://raw.githack.com/GarethW85/To-Do-App/main/todo.html" ><h2>DEMO LIVE</h2></a>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
