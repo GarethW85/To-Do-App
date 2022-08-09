@@ -37,6 +37,7 @@ function myElement() {
   var animate = document.getElementById('errorMsg');
   
 
+
   li.appendChild(t);
   if (inputValue === '') {
     document.getElementById("errorMsg").style.display = 'block';
@@ -116,6 +117,15 @@ function sortList() {
 function save() {
 // get date from input field
 var new_data = document.getElementById('myInput').value;
+const input = document.getElementById('myInput');
+
+//validation on blank fields
+if (input.value === ""){
+  alert ('You cant save empty fields');
+  return false;
+}
+
+
 
 // it storage is empty then 
 if (localStorage.getItem('data') == null ) {
