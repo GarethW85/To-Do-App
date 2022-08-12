@@ -18,7 +18,8 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
     <script src="./js/app.js" ></script>
-    
+    <!-- Alert Box Styling -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>To Do App</title>
 </head>
 <body id="background" >
@@ -32,14 +33,16 @@
             <button onclick="clearAll('removeList')" class="BtnDelete" id="removeList"><i class="fa-regular fa-trash-can"></i></button>
             <!-- sort list in alhpabetical order -->
             <button onclick="sortList()" class="sortLst" id="sortList"><i class="fa-solid fa-arrow-down-a-z"></i></button>
-            <button onclick="save()" class="sortLst" id="saveList"><i class="far fa-save"></i></button>
-            <br><br>
+            <!-- <button onclick="save()" class="sortLst" id="saveList"><i class="far fa-save"></i></button> -->
+            <button onclick="edit()" class="editLst" id="editList"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <!-- completed editing button HIDDEN -->
+            <button onclick="completed()" class="completed"><i class="fa fa-check" aria-hidden="true"></i></button>
             <!-- Added a hidden message to display if no input added -->
             <h5 class="animate__animated animate__shakeX" id="errorMsg" hidden  >Your list can't be blank!</h5>
             
         </div>
 
-      <ul id="myUL"></ul>
+      <ul id="myUL" contenteditable="false"></ul>
     
 </body>
 </html>

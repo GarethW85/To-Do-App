@@ -36,6 +36,28 @@ function myElement() {
   var t = document.createTextNode(inputValue);
   var animate = document.getElementById('errorMsg');
   
+  // get date from input field
+var new_data = document.getElementById('myInput').value;
+const input = document.getElementById('myInput');
+
+//validation on blank fields
+if (input.value === ""){
+  // alert ('You cant save empty fields');
+  swal("Sorry!", "You cant save empty fields!", "error");
+  return false;
+}
+
+// it storage is empty then 
+if (localStorage.getItem('data') == null ) {
+  localStorage.setItem('data', '[]')
+}
+
+//get old data
+var old_data = JSON.parse(localStorage.getItem('data'));
+old_data.push(new_data);
+
+//save new data
+localStorage.setItem('data', JSON.stringify(old_data));
 
 
   li.appendChild(t);
@@ -50,11 +72,11 @@ function myElement() {
 
   //Strikethrough on List items
   /////////////////////////////////////////////////////////
-  li.addEventListener('click', function () {
+  li.addEventListener('dblclick', function () {
     li.style.textDecoration = "line-through"
   })
 
-  li.addEventListener('dblclick', function () {
+  li.addEventListener('click', function () {
     li.style.textDecoration = "none"
   })
 
@@ -76,6 +98,7 @@ function myElement() {
 // Delete all listed items and reload the page
 /////////////////////////////////////////////
 function clearAll(x) {
+  
   switch (x) {
     case 'removeList':
       document.getElementById('myUL').style.display='none';
@@ -90,6 +113,7 @@ function clearAll(x) {
 // Sort by alphabetical order on click
 //////////////////////////////////////////////////////////
 function sortList() {
+
   var list, i , switching, listitems, shouldSwitch;
     list = document.getElementById('myUL');
     switching = true;
@@ -114,28 +138,61 @@ function sortList() {
 // Local Storage
 ///////////////////////////////////////////////////////
 
-function save() {
-// get date from input field
-var new_data = document.getElementById('myInput').value;
-const input = document.getElementById('myInput');
+// function save() {
+// // get date from input field
+// var new_data = document.getElementById('myInput').value;
+// const input = document.getElementById('myInput');
 
-//validation on blank fields
-if (input.value === ""){
-  alert ('You cant save empty fields');
-  return false;
-}
+// //validation on blank fields
+// if (input.value === ""){
+//   alert ('You cant save empty fields');
+//   return false;
+// }
 
 
+// // it storage is empty then 
+// if (localStorage.getItem('data') == null ) {
+//   localStorage.setItem('data', '[]')
+// }
 
-// it storage is empty then 
-if (localStorage.getItem('data') == null ) {
-  localStorage.setItem('data', '[]')
-}
+// //get old data
+// var old_data = JSON.parse(localStorage.getItem('data'));
+// old_data.push(new_data);
 
-//get old data
-var old_data = JSON.parse(localStorage.getItem('data'));
-old_data.push(new_data);
+// //save new data
+// localStorage.setItem('data', JSON.stringify(old_data));
+// }
 
-//save new data
-localStorage.setItem('data', JSON.stringify(old_data));
-}
+
+//Edit List Items
+///////////////////////////////////////////////////////
+function edit() {
+
+  var editMe = document.querySelectorAll("[contenteditable=false]");
+  // document.getElementById("editList").style.visibility = 'hidden';
+  // document.getElementById("completed").style.visibility = 'visible';
+  // var icon = document.getElementById("editList");
+  // el.classList.toggle('fa-check');
+  // icon.classList.toggle('fa-check');
+
+  for(var i=0; i<editMe.length; i++)
+    editMe[i].setAttribute("contenteditable", true);
+    
+    var keydown = document.getElementById("myUL");
+    keydown.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {  
+        validate(e);
+    }
+  });
+   
+  }
+  
+//Completed edits
+  function completed() {
+    var doneEdit = document.querySelectorAll("[contenteditable=true]");
+    for(var i=0; i<doneEdit.length; i++)
+    doneEdit[i].setAttribute("contenteditable", false);
+    
+  }
+
+  
