@@ -1,9 +1,7 @@
 //////////////////////////////////////////////////////////
 ////// JAVASCRIPT IS MY NEW FAVOURITE LANGUAGE ///////////
 //////////////////////////////////////////////////////////
-// window.addEventListener('DOMContentLoaded', () => {
-//   refreshDom();
-// });
+
 
 
 // Create a "close" button X
@@ -18,7 +16,7 @@ for (i = 0; i < mylist.length; i++) {
 }
 
 
-// Click on a close button to hide the current list item
+// Close button to hide the current list item
 ////////////////////////////////////////////////////////
 var close = document.getElementsByClassName("close");
 var i;
@@ -176,28 +174,32 @@ function edit() {
   // var icon = document.getElementById("editList");
   // el.classList.toggle('fa-check');
   // icon.classList.toggle('fa-check');
-
+  // above was attemps with buttons to toggle between them onclick ... aborted that idea 
   for(var i=0; i<editMe.length; i++)
     editMe[i].setAttribute("contenteditable", true);
     
-    var keydown = document.getElementById("myUL");
-    keydown.addEventListener("keydown", function (e) {
-    if (e.code === "Enter") {  
-        validate(e);
-    }
+  //   var keydown = document.getElementById("myUL");
+  //   keydown.addEventListener("keydown", function (e) {
+  //   if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+  //       validate(e);
+  //    return false;
+  //   }
+  // });
+  // above was working but stopped ... had to find a work around 
+  document.addEventListener('keypress', function (e) {
+    if (e.keyCode === 13 || e.which === 13) {
+        e.preventDefault();
+        return false;
+    }    
   });
- 
-  
   }
   
-//Completed edits
+//Complete button to click when done with edits
+//////////////////////////////////////////////////////
   function completed() {
     var doneEdit = document.querySelectorAll("[contenteditable=true]");
     for(var i=0; i<doneEdit.length; i++)
-    doneEdit[i].setAttribute("contenteditable", false);
-    
-    
-  
+    doneEdit[i].setAttribute("contenteditable", false); 
   }
   
 
