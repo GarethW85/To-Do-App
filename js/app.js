@@ -2,7 +2,8 @@
 ////// JAVASCRIPT IS MY NEW FAVOURITE LANGUAGE ///////////
 //////////////////////////////////////////////////////////
 
-
+// check for white space before text
+// Still need to add prevention of white spaces on the start of the input field
 
 // Create a "close" button X
 //////////////////////////////////////////////////////////
@@ -40,14 +41,15 @@ function myElement() {
 var new_data = document.getElementById('myInput').value;
 const input = document.getElementById('myInput');
 
-//validation on blank fields
+
+//validation on empty submits 
 if (input.value === ""){
   // alert ('You cant save empty fields');
-  swal("Sorry!", "You cant save empty fields!", "error");
+  swal("Sorry!", "No empty fields accepted!", "error");
   return false;
 }
 
-// it storage is empty then 
+// if storage is empty then 
 if (localStorage.getItem('data') == null ) {
   localStorage.setItem('data', '[]')
 }
