@@ -1,7 +1,9 @@
 //////////////////////////////////////////////////////////
 ////// JAVASCRIPT IS MY NEW FAVOURITE LANGUAGE ///////////
 //////////////////////////////////////////////////////////
-
+// window.addEventListener('DOMContentLoaded', () => {
+//   refreshDom();
+// });
 
 
 // Create a "close" button X
@@ -135,8 +137,8 @@ function sortList() {
 }
 
 
-// Local Storage
-///////////////////////////////////////////////////////
+// // Local Storage
+// ///////////////////////////////////////////////////////
 
 // function save() {
 // // get date from input field
@@ -184,7 +186,8 @@ function edit() {
         validate(e);
     }
   });
-   
+ 
+  
   }
   
 //Completed edits
@@ -193,6 +196,9 @@ function edit() {
     for(var i=0; i<doneEdit.length; i++)
     doneEdit[i].setAttribute("contenteditable", false);
     
+    
+  
   }
+  
 
   

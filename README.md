@@ -20,6 +20,6 @@ Step 7 : You can edit the to do items by clicking on the icon with a Pencil and 
         
 
 
-<a href="https://raw.githack.com/GarethW85/To-Do-App/main/todo.html" ><h2>DEMO LIVE</h2></a>
+<a href="https://raw.githack.com/GarethW85/To-Do-App/main/todo.html"><h2>DEMO LIVE</h2></a>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
