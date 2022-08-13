@@ -2,8 +2,6 @@
 ////// JAVASCRIPT IS MY NEW FAVOURITE LANGUAGE ///////////
 //////////////////////////////////////////////////////////
 
-// check for white space before text
-// Still need to add prevention of white spaces on the start of the input field
 
 // Create a "close" button X
 //////////////////////////////////////////////////////////
