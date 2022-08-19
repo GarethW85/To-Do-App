@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////////
 
 // Prevent white spaces from been added to the list
-//////////////////////////////////////////////////////////
+
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("myInput");
 
@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Create a "close" button X
-//////////////////////////////////////////////////////////
 var mylist = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < mylist.length; i++) {
@@ -31,7 +30,6 @@ for (i = 0; i < mylist.length; i++) {
 }
 
 // Close button to hide the current list item
-////////////////////////////////////////////////////////
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -42,7 +40,6 @@ for (i = 0; i < close.length; i++) {
 }
 
 // Create a new list item when clicking on the "Add" button
-///////////////////////////////////////////////////////////
 function myElement() {
   let li = document.createElement("li");
   let inputValue = document.getElementById("myInput").value;
@@ -106,7 +103,6 @@ function myElement() {
 }
 
 // Delete all listed items and reload the page
-/////////////////////////////////////////////
 function clearAll(x) {
   switch (x) {
     case "removeList":
@@ -119,7 +115,6 @@ function clearAll(x) {
 }
 
 // Sort by alphabetical order on click
-//////////////////////////////////////////////////////////
 function sortList() {
   let list, i, switching, listitems, shouldSwitch;
   list = document.getElementById("myUL");
@@ -145,20 +140,20 @@ function sortList() {
 }
 
 //Edit List Items
-///////////////////////////////////////////////////////
 function edit() {
   let editMe = document.querySelectorAll("[contenteditable=false]");
+
   for (let i = 0; i < editMe.length; i++)
-    document.addEventListener("keypress", function (e) {
-      if (e.keyCode === 13 || e.which === 13) {
-        e.preventDefault();
-        return false;
-      }
-    });
+    editMe[i].setAttribute("contenteditable", true);
+  document.addEventListener("keypress", function (e) {
+    if (e.keyCode === 13 || e.which === 13) {
+      e.preventDefault();
+      return false;
+    }
+  });
 }
 
 //Complete button to click when done with edits
-//////////////////////////////////////////////////////
 function completed() {
   let doneEdit = document.querySelectorAll("[contenteditable=true]");
   for (let i = 0; i < doneEdit.length; i++)

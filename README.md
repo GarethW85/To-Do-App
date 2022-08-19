@@ -8,7 +8,7 @@
 
 Step 1 : Create your item by typing your to do into the input field. <br>
 Step 2 : Click "+" to add the view that newly added item in your list..<br>
-Step 3 : You can delete that todo by clicking "x" on the item line.<br>
+Step 3 : You can delete that to do by clicking "x" on the item line.<br>
 Step 4 : You also have the option to mark the item as completed by double clicking once on the name of the item<br>
          if this was a mistake you can undo it by clicking once on the name of the item to unmark it. <br>
 Step 5 : Once you have created your list you can delete everything if you are just testing it by clicking <br>
