@@ -164,3 +164,13 @@ function completed() {
   for (let i = 0; i < doneEdit.length; i++)
     doneEdit[i].setAttribute("contenteditable", false);
 }
+
+// Developer contact information using objects
+const developerContact = {
+  Name: "Gareth",
+  Institution: "CodeSpace",
+  GithubProfile: "github.com/garethw85",
+  Email: "tidylad@hotmail.com",
+};
+console.log(developerContact);
+localStorage.setItem("Developer Details", JSON.stringify(developerContact));
