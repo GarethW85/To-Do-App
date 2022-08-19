@@ -16,10 +16,6 @@ Step 5 : Once you have created your list you can delete everything if you are ju
 Step 6 : You can sort the list in Alphabetical order by clicking the down arrow button labled with AZ.<br>
 Step 7 : You can edit the to do items by clicking on the icon with a Pencil and if you want to stop editing then click the 
          Tick button to finish editing <br>
-
         
-
-
-<a href="https://rawcdn.githack.com/GarethW85/To-Do-App/dedcae7a5ada4d1c39c47098727da34f4f66d3c2/todo.html"><h2>DEMO LIVE</h2></a>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
