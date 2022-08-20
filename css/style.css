@@ -9,6 +9,13 @@ body,html {
   background-attachment: fixed; 
 }
 
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #background {
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,8 +23,7 @@ body,html {
   position: relative;    
 }
 
-ul {
-  
+ul { 
   flex-direction: column;
   margin: 0;
   padding: 0;
@@ -34,8 +40,6 @@ ul li {
   font-size: 15px;
   transition: 0.2s;
   font-family: 'Poppins', sans-serif;
-  margin-left: 25%;
-  margin-right: 35%;
   border: 3px solid rgba(173, 173, 173, 0.3);
   box-shadow: 5px 3px rgba(0, 0, 0, 0.1);
   width: 628px;
@@ -80,8 +84,6 @@ ul li:hover {
 .header {
   background-color: rgba(173, 173, 173, 0.3) ;
   margin-top: 7%;
-  margin-left: 25%;
-  margin-right: 35%;
   padding: 30px 40px;
   color: white;
   border:1px solid rgba(173, 173, 173, 0.2);

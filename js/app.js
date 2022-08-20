@@ -3,14 +3,14 @@
 //////////////////////////////////////////////////////////
 
 // Prevent white spaces from been added to the list
-
 document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("myInput");
 
   if (!input) return;
   input.addEventListener("input", (e) => {
     const value = e.target.value;
-    const hasTrailingSpace = value !== " " && value.charAt(value.length - 1) === " ";
+    const hasTrailingSpace =
+      value !== " " && value.charAt(value.length - 1) === " ";
     const words = value.split(" ").filter((el) => el !== "");
     let sanitizedValue = words.join(" ");
 
