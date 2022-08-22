@@ -136,6 +136,7 @@ function sortList() {
     }
     listitems[i].parentNode.insertBefore(listitems[i + 1], listitems[i]);
     switching = true;
+    break;
   }
 }
 
